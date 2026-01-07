@@ -8,11 +8,11 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-func TestSalalyOutOfRangeCase(t *testing.T){
+func TestSalalyOutOfRangeCase(t *testing.T) {
 	g := NewGomegaWithT(t)
 	employee := entity.Employees{
-		Name: "wwwkdwo",
-		Salary: 999999999999999999,
+		Name:         "wwwkdwo",
+		Salary:       999999999999999999,
 		EmployeeCode: "HR-1024",
 	}
 	ok, err := govalidator.ValidateStruct(employee)
